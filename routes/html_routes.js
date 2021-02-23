@@ -9,4 +9,4 @@ app.get("*", (rec, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"))
 })
 module.exports = app
-//html routs link html files to specified url end point. 
+//html routs link html files to specified url end point
