@@ -5,7 +5,7 @@ const db = require("../db/db.json")
 const app = require('./html_routes')
 
 express.get("/notes",(req, res) => {
-    let db = JSON.parse(fs.readFileSync("./db/db.json"))
+    let db = JSON.parse(fs.readFileSync("../db/db.json"))
     res.json(db)
 })
 express.post("/notes", (req, res) => {
@@ -15,7 +15,7 @@ express.post("/notes", (req, res) => {
         id: Math.random()*500
     }
     db.push(newNoteContent)
-    fs.writeFileSync("./db/db.json", JSON.stringify(db))
+    fs.writeFileSync("../db/db.json", JSON.stringify(db))
     res.json(db)
 })
 
